@@ -2,7 +2,10 @@ import React from 'react'
 
 function NavBar() {
     return (
-        <h1>Finestra Eyewear</h1>
+        <div>
+            <h1>Finestra Eyewear</h1>
+            <a><img href=""></img></a>
+        </div>
     )
 }
 
