@@ -1,5 +1,4 @@
 import React from 'react'
-// import User from '../../imagens/icons/user.png'
 
 function NavBar() {
     return (
