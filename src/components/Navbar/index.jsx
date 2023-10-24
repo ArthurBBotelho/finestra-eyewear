@@ -7,13 +7,14 @@ import search from '../../imagens/icons/search.svg'
 function NavBar() {
     return (
         <div>
-            <header class="flex">
-                <h1 class="text-3xl font-bold bg-slate-600">Finestra Eyewear</h1>
-                <a><img width={20} src={search} alt="Icone de Busca" ></img></a>
-                <a><img width={20} src={user} alt="Icone do Usuário" ></img></a>
-                <a><img width={20} src={cart} alt="Carrinho de Compras" ></img></a>
+            <header class="p-6 grid grid-cols-2 w-auto h-20 bg-slate-200">
+                <h1 class="pl-12 font-bold text-2xl">Finestra Eyewear</h1>
+                <div class="flex justify-end">
+                    <a class="pr-12"><img class="w-6" src={search} alt="Icone de Busca" ></img></a>
+                    <a class="pr-12"><img class="w-6" src={user} alt="Icone do Usuário" ></img></a>
+                    <a class="pr-20"><img class="w-6" src={cart} alt="Carrinho de Compras" ></img></a>
+                </div>
             </header>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptates nihil, alias ab adipisci a eveniet, numquam animi unde repudiandae facilis doloribus sit expedita error ratione, quis quam quibusdam perspiciatis. Similique.</p>
         </div>
     )
 }
