@@ -1,8 +1,8 @@
 import React from 'react';
 import '../../index.css';
 import CartWidget from '../CartWidget';
-import user from '../../imagens/icons/user.svg';
-import search from '../../imagens/icons/search.svg'
+import SearchWidget from '../SearchWidget';
+import UserWidget from '../UserWidget';
 
 function NavBar() {
     return (
@@ -14,8 +14,8 @@ function NavBar() {
                     <a class="pr-12 font-thin text-xl">Sobre</a>
                 </div>
                 <div class="flex justify-end">
-                    <a class="pr-12"><img class="w-6" src={search} alt="Icone de Busca" ></img></a>
-                    <a class="pr-12"><img class="w-6" src={user} alt="Icone do Usuário" ></img></a>
+                    <SearchWidget />
+                    <UserWidget />
                     <CartWidget />
                 </div>
             </header>

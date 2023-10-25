@@ -3,8 +3,16 @@ import cart from '../../imagens/icons/cart.svg';
 
 function CartWidget() {
     return (
-        <div>
-            <a class="pr-24"><img class="w-6" src={cart} alt="Carrinho de Compras" ></img></a>
+        <div class="flex">
+            <a class="pr-24"><img class="w-6" src={cart} alt="Carrinho de Compras"></img><ItemListContainer /></a>
+        </div>
+    )
+}
+
+function ItemListContainer () {
+    return (
+        <div class="w-2">
+            "itens-carrinho"
         </div>
     )
 }
