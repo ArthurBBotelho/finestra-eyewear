@@ -4,6 +4,7 @@ import Button from './components/Button'
 import OculosAmarelo from './imagens/photos/oculos-amarelo.jpg'
 import OculosFlor from './imagens/photos/oculos-flor.jpg'
 import Products from './Products'
+import ItemCount from './components/ItemCount'
 
 function App() {
   return (
@@ -21,6 +22,7 @@ function App() {
       <div>
         <h1>Produtos</h1>
         <Products />
+        <ItemCount />
       </div>
     </div>
   );
