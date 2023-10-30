@@ -1,11 +1,11 @@
 import './index.css'
-import NavBar from './components/NavBar'
+import Navbar from './components/Navbar'
 import ItemListContainer from './components/ItemListContainer'
 
 function App() {
   return (
     <div class='w-full'>
-      <NavBar />
+      <Navbar />
       <ItemListContainer />
     </div>
   );
