@@ -5,8 +5,8 @@ function ItemCount( {soma, subtracao, count} ) {
         <div>
             <div>{count}</div>
 
-            <button onClick={soma}>+</button>
-            <button onClick={subtracao}>-</button>
+            <button onClick={soma}> + </button>
+            <button onClick={subtracao}> - </button>
         </div>
     )
 }

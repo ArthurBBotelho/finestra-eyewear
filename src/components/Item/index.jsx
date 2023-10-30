@@ -24,5 +24,4 @@ function Item({produto}) {
     )
 }
 
-
 export default Item

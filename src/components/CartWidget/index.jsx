@@ -12,7 +12,7 @@ function CartWidget() {
 function ItemListContainer () {
     return (
         <div class="w-2">
-            "itens-carrinho"
+            
         </div>
     )
 }
