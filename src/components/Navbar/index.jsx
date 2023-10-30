@@ -1,5 +1,4 @@
 import React from 'react';
-import '../../index.css';
 import CartWidget from '../CartWidget';
 import SearchWidget from '../SearchWidget';
 import UserWidget from '../UserWidget';
