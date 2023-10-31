@@ -5,20 +5,20 @@ import UserWidget from '../UserWidget';
 
 function Navbar() {
     return (
-        <div>
-            <header class="p-6 grid grid-cols-2 w-auto h-22">
-                <div class="flex align-bottom">
-                    <h1 class="px-12 font-bold text-3xl ">Finestra Eyewear</h1>
-                    <a class="px-12 font-thin text-xl">Produtos</a>
-                    <a class="pr-12 font-thin text-xl">Sobre</a>
+        <div className="w-auto bg-black text-white">
+            <header className="flex align-bottom">
+                <div className="flex ml-32">
+                    <h1 className="m-8 font-bold text-3xl">Finestra Eyewear</h1>
+                    <a className="m-10 font-thin text-xl hover:underline cursor-pointer">Produtos</a>
+                    <a className="m-10 font-thin text-xl hover:underline cursor-pointer">Sobre</a>
                 </div>
-                <div class="flex justify-end">
-                    <SearchWidget />
-                    <UserWidget />
-                    <CartWidget />
+                <div className="flex mt-10 h-auto">
+                    <div><SearchWidget /></div>
+                    <div><UserWidget /></div>
+                    <div><CartWidget /></div>
                 </div>
             </header>
-            <div class="w-auto h-0.5 bg-black"></div>
+            <div ></div>
         </div>
     )
 }

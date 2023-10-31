@@ -31,6 +31,7 @@ function ItemListContainer() {
                 </div>
                 <div className="mt-8">
                     <img src={OculosAmarelo}></img>
+                    <p clasName="font-bold">Mais do que óculos, vendemos uma visão</p>
                     <Button texto="Oculos de Sol" />
                     <Button texto="Oculos de Grau" />
                 </div>
