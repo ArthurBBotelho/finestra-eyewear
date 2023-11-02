@@ -4,7 +4,7 @@ import search from '../../imagens/icons/search.svg'
 function SearchWidget() {
     return (
         <div>
-            <a class="pr-12"><img class="w-6" src={search} alt="Icone de Busca" ></img></a>
+            <a><img className="w-6 h-6" src={search} alt="Icone de Busca" ></img></a>
         </div>
     )
 }
