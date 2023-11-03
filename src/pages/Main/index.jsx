@@ -1,24 +1,26 @@
 import Button from '../../components/Button'
-import OculosAmarelo from '../../imagens/photos/oculos-amarelo.jpg'
-import OculosFlor from '../../imagens/photos/oculos-flor.jpg'
+import OculosGrau from '../../imagens/photos/oculos-grau.png'
+import OculosSol from '../../imagens/photos/oculos-sol.png'
 import Navbar from '../../components/NavBar'
 import Video from '../../imagens/video/video-campaign.mp4'
 
 function Main(){
     return(
         <div>
-            <div class="flex mt-12 w-5/6 mx-auto gap-12">
+            <div>
+                <video loop autoPlay muted className="mx-auto w-screen" src={Video}></video>
+            </div>
+            <div className="font-thin text-6xl flex justify-center m-8 text-slate-500">
+                <p>MAIS QUE ÓCULOS, UMA VISÃO</p>
+            </div>
+            <div className="flex m-12 w-auto mx-12 gap-12">
                 <div>
-                    <video className="w-full" src={Video} controls></video>
+                    <a className="pt-">GRAU</a>
+                    <img className="hover:opacity-70" src={OculosGrau}></img>
                 </div>
                 <div>
-                    <img className="mt-8" src={OculosFlor}></img>
-                </div>
-                <div className="mt-8">
-                    <img src={OculosAmarelo}></img>
-                    <p clasName="font-bold">Mais do que óculos, vendemos uma visão</p>
-                    <Button texto="Oculos de Sol" />
-                    <Button texto="Oculos de Grau" />
+                    <a>SOL</a>
+                    <img className="hover:opacity-70" src={OculosSol}></img>
                 </div>
             </div> 
         </div>

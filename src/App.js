@@ -2,16 +2,18 @@ import './index.css'
 import Navbar from './components/NavBar'
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import Router from './router';
-import Main from './pages/Main'
+import Main from './pages/Main';
+import Footer from './components/Footer'
 
 function App() {
   return (
-    <div class='w-full'>
+    <div>
       <BrowserRouter>
         <Navbar />
           <Router />
       </BrowserRouter>
       <Main />
+      <Footer />
     </div>
   );
 }
