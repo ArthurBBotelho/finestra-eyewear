@@ -10,8 +10,8 @@ function Navbar() {
             <header className="flex w-full justify-between px-32">
                 <div className="flex">
                     <h1 className="m-4 font-bold text-3xl">FINESTRA EYEWEAR</h1>
-                    <NavLink to="/Produtos" className="m-6 font-thin text-xl hover:underline cursor-pointer">Produtos</NavLink>
-                    <NavLink to="/Sobre" className="m-6 font-thin text-xl hover:underline cursor-pointer">Sobre</NavLink>
+                    <NavLink to="/produtos" className="m-6 font-thin text-xl hover:underline cursor-pointer">Produtos</NavLink>
+                    <NavLink to="/sobre" className="m-6 font-thin text-xl hover:underline cursor-pointer">Sobre</NavLink>
                 </div>
                 <div className="flex h-18 w-18 mr-6 items-center justify-around">
                     <div className="cursor-pointer mr-6"><SearchWidget /></div>

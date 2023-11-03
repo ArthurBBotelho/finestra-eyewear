@@ -16,9 +16,12 @@ function Item({produto}) {
     }
 
     return(
-        <div>
-            <a><img className="w-1/3" src={produto.imagem} alt="Oculos"></img></a>
-            <ItemCount count={count} soma={soma} subtracao={subtracao}/>
+        <div className="flex-col justify-center border-2 border-black w-fit">
+            <h1>{produto.nome}</h1>
+            <a><img className="flex justify-center w-1/2" src={produto.imagem} alt="Oculos"></img></a>
+            <div>
+                <ItemCount count={count} soma={soma} subtracao={subtracao}/>
+            </div>
             <Button texto="Adicionar ao Carrinho"/>
         </div>
     )

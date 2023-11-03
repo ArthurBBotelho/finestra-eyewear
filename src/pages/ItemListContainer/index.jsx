@@ -24,7 +24,7 @@ function ItemListContainer() {
     return(
         <div>
             <h1 className="font-bold text-xl">Produtos</h1>
-            <div className="flex justify-center font-bold">
+            <div className="flex justify-center font-bold p-6">
                 <ItemList produtos={produtos}/>
             </div>
        </div>

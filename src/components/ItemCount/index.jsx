@@ -2,11 +2,12 @@ import React from "react";
 
 function ItemCount( {soma, subtracao, count} ) {
     return(
-        <div>
-            <div>{count}</div>
+        <div className="flex justify-center border-2">
+            <button className="bg-black text-white w-8 h-6" onClick={soma}> + </button>
 
-            <button onClick={soma}> + </button>
-            <button onClick={subtracao}> - </button>
+            <div className="w-12 flex justify-center" >{count}</div>
+           
+            <button className="bg-black text-white w-8 h-6" onClick={subtracao}> - </button>
         </div>
     )
 }
