@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import Button from "../Button";
 import ItemCount from "../ItemCount";
+import { Link } from "react-router-dom";
 
 function Item({produto}) {
     const [count, setCount] = useState(0);
@@ -22,7 +23,9 @@ function Item({produto}) {
             <div>
                 <ItemCount count={count} soma={soma} subtracao={subtracao}/>
             </div>
-            <Button texto="Adicionar ao Carrinho"/>
+            <Link to={`/produto/${produto.id}`}>
+                <Button texto="Detalhes do Produto"/>
+            </Link>
         </div>
     )
 }

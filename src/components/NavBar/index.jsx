@@ -3,10 +3,11 @@ import CartWidget from '../CartWidget';
 import SearchWidget from '../SearchWidget';
 import UserWidget from '../UserWidget';
 import { NavLink } from 'react-router-dom';
+import "./style.css"
 
 function Navbar() {
     return (
-        <div className="w-full bg-black text-white h-18 fixed">
+        <div className="w-full bg-black text-white h-18 sticky index-navBar">
             <header className="flex w-full justify-between px-32">
                 <div className="flex">
                     <NavLink to="/" className="m-4 font-bold text-3xl">FINESTRA EYEWEAR</NavLink>

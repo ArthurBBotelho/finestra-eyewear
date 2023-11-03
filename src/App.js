@@ -2,18 +2,16 @@ import './index.css'
 import Navbar from './components/NavBar'
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import Router from './router';
-import Main from './pages/Main';
 import Footer from './components/Footer'
 
 function App() {
-  return (
+  return ( 
     <div>
       <BrowserRouter>
         <Navbar />
-          <Router />
+        <Router />
+        <Footer />
       </BrowserRouter>
-      <Main />
-      <Footer />
     </div>
   );
 }
