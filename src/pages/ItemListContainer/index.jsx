@@ -15,8 +15,8 @@ function ItemListContainer() {
         return new Promise((resolve, reject) => {
             setTimeout(() => {
                  setProdutos([
-                    { id: 1, nome: "Phinet", estoque: 10, imagem: "https://github.com/ArthurBBotelho/finestra-eyewear/blob/main/src/imagens/products/phinet/phinet-front.png?raw=true" },
-                    { id: 2, nome: "Mirage", estoque: 5, imagem: "https://github.com/ArthurBBotelho/finestra-eyewear/blob/main/src/imagens/products/mirage/mirage-front.png?raw=true" }
+                    { id: 1, nome: "Phinet", estoque: 10, category: "Oculos de Grau", imagem: "https://github.com/ArthurBBotelho/finestra-eyewear/blob/main/src/imagens/products/phinet/phinet-front.png?raw=true" },
+                    { id: 2, nome: "Mirage", estoque: 5, category: "Oculos de Sol", imagem: "https://github.com/ArthurBBotelho/finestra-eyewear/blob/main/src/imagens/products/mirage/mirage-front.png?raw=true" }
                  ]);
                  resolve();
             }, 1000);

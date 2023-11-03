@@ -2,6 +2,7 @@ import './index.css'
 import Navbar from './components/NavBar'
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import Router from './router';
+import Main from './pages/Main'
 
 function App() {
   return (
@@ -10,7 +11,7 @@ function App() {
         <Navbar />
           <Router />
       </BrowserRouter>
-      
+      <Main />
     </div>
   );
 }
