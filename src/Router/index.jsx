@@ -7,7 +7,7 @@ function Router() {
     return (
         <div>
             <Routes>
-                <Route exact path="/" element={<ItemListContainer />}/>
+                <Route exact path="/produtos" element={<ItemListContainer />}/>
                 <Route exact path="/sobre" element={<Sobre />}/>
             </Routes>
         </div>

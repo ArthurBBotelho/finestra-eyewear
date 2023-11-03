@@ -19,30 +19,17 @@ function ItemListContainer() {
                     { id: 2, nome: "Mirage", estoque: 5, imagem: "https://github.com/ArthurBBotelho/finestra-eyewear/blob/main/src/imagens/products/mirage/mirage-front.png?raw=true" }
                  ]);
                  resolve();
-            }, 2000);
+            }, 1000);
         });
     }
 
     return(
         <div>
-            <div class="flex mt-12 w-5/6 mx-auto gap-12">
-                <div>
-                    <img className="mt-8" src={OculosFlor}></img>
-                </div>
-                <div className="mt-8">
-                    <img src={OculosAmarelo}></img>
-                    <p clasName="font-bold">Mais do que óculos, vendemos uma visão</p>
-                    <Button texto="Oculos de Sol" />
-                    <Button texto="Oculos de Grau" />
-                </div>
-            </div> 
-            <div>
-                <h1 className="font-bold text-xl">Produtos</h1>
-                <div className="flex justify-center font-bold">
-                    <ItemList produtos={produtos}/>
-                </div>
+            <h1 className="font-bold text-xl">Produtos</h1>
+            <div className="flex justify-center font-bold">
+                <ItemList produtos={produtos}/>
             </div>
-        </div>
+       </div>
     )
 }
 

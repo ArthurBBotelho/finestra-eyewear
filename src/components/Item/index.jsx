@@ -16,8 +16,8 @@ function Item({produto}) {
     }
 
     return(
-        <div class="">
-            <a><img class="w-1/3" src={produto.imagem} alt="Oculos de Grau Phinet"></img></a>
+        <div>
+            <a><img className="w-1/3" src={produto.imagem} alt="Oculos"></img></a>
             <ItemCount count={count} soma={soma} subtracao={subtracao}/>
             <Button texto="Adicionar ao Carrinho"/>
         </div>
