@@ -1,5 +1,4 @@
 import React, { useState, useEffect } from "react";
-import Button from '../../components/Button'
 import ItemList from "../../components/ItemList";
 
 function ItemListContainer() {
