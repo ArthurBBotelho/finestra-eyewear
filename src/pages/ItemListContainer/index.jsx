@@ -22,8 +22,9 @@ function ItemListContainer() {
 
     return(
         <div>
-            <h1 className="font-bold text-xl">Produtos</h1>
-            <div className="flex justify-center font-bold p-6">
+            <h1 className="font-thin text-3xl flex justify-center my-12">PRODUTOS</h1>
+            <p className="font-thin text-2xl flex justify-center mx-64 mb-12">Nossos produtos representam o pináculo da elegância e da qualidade no mundo dos óculos de grife. Cada peça é cuidadosamente elaborada com atenção aos detalhes, incorporando os mais finos materiais e a mais avançada tecnologia, resultando em obras de arte para serem exibidas em seu rosto.</p>
+            <div className="flex justify-center columns-2">
                 <ItemList produtos={produtos}/>
             </div>
        </div>

@@ -17,12 +17,14 @@ function Item({produto}) {
     }
 
     return(
-        <div className="flex-col justify-center border-2 border-black w-fit">
-            <h1>{produto.nome}</h1>
-            <a><img className="flex justify-center w-1/2" src={produto.imagem} alt="Oculos"></img></a>
-            <Link to={`/produto/${produto.id}`}>
-                <Button texto="Detalhes do Produto"/>
-            </Link>
+        <div className="mx-36 my-12 w-1/3">
+            <div className="border-2 border-black">
+                <h1 className="text-3xl font-bold flex justify-center">{produto.nome}</h1>
+                <img className="flex justify-center" src={produto.imagem} alt="Oculos"></img>
+                <Link to={`/produto/${produto.id}`} className="flex justify-center">
+                    <Button texto="Detalhes do Produto"/>
+                </Link>
+            </div>
         </div>
     )
 }
