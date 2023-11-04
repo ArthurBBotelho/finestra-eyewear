@@ -6,6 +6,9 @@ function Footer () {
                 <p>FINESTRA</p>
                 <p>EYEWEAR</p>
             </div>
+            <div>
+                <p>Finestra Eyewear, Produção e Comércio de Artesanatos CNPJ 13.542.297/0001-00</p>
+            </div>
         </div>
     )
 }
