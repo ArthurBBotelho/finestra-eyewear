@@ -21,7 +21,7 @@ function Sobre() {
             </div>
             <div>
                 <h1>Localização</h1>
-                <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAm0bUZrHUwM0MrTapqW3tlufe3QtlwAqM&callback=initMap&v=weekly"></script>
+                
             </div>
         </div>
     )
