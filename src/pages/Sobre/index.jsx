@@ -1,3 +1,4 @@
+import Maps from "../../components/Map"
 
 function Sobre() {
   
@@ -21,7 +22,7 @@ function Sobre() {
             </div>
             <div>
                 <h1>Localização</h1>
-                
+                <Maps />
             </div>
         </div>
     )
