@@ -1,4 +1,5 @@
 import Maps from "../../components/Map"
+import Nike from "../../imagens/partership/nike.png"
 
 function Sobre() {
   
@@ -15,7 +16,9 @@ function Sobre() {
             </div>
             <div>
                 <h1 className="font-thin text-3xl flex justify-center my-12">Nossos Parceiros</h1>
-                <div></div>
+                <div>
+                    
+                </div>
             </div>
             <div>
                 <h1 className="font-thin text-3xl flex justify-center my-12">Localização</h1>
