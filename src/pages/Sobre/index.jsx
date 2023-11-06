@@ -1,5 +1,5 @@
 import Maps from "../../components/Map"
-import Nike from "../../imagens/partership/nike.png"
+
 
 function Sobre() {
   
