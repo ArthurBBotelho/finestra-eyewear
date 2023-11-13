@@ -2,10 +2,12 @@ import { useState, useEffect } from 'react';
 import { useParams } from 'react-router-dom';
 import Button from "../../components/Button";
 import ItemCount from "../../components/ItemCount";
+import { UseCart } from '../../context/CartContext';
 
 function ItemDetailContainer() {
+    const {addCart} = UseCart()
     const {id} = useParams()
-
+    
     const [produto, setProduto] = useState({})
 
     const produtos = [
@@ -45,6 +47,14 @@ function ItemDetailContainer() {
         }
     }
 
+    const addItem = () => {
+        console.log(produto.nome)
+        addCart({
+            nome: produto.nome, 
+            quantidade: count,    
+        })
+    }
+
     return(
         <div className="mx-36 my-12 border-2 border-black p-12">
             <div className="columns-2">
@@ -55,7 +65,7 @@ function ItemDetailContainer() {
                     <h1 className="flex font-bold text-3xl p-2">{produto.nome}</h1>
                     <p className="p-2">Restam apenas {produto.estoque} unidades desse produto!</p>
                     <ItemCount count={count} soma={soma} subtracao={subtracao} className="p-2"/>
-                    <Button texto="Adiconar ao Carrinho"/>
+                    <Button onClick={addItem} texto="Adiconar ao Carrinho"/>
                 </div>
             </div>
         </div>
