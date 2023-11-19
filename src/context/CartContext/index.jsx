@@ -10,8 +10,13 @@ export const CartProvider = ({ children }) => {
         console.log(cart)
     }
 
+    function removerItem(id) {
+        const updatedCart = cart.filter(item => item.id !== id);
+        setCart(updatedCart);
+    }
+
     return (
-        <CartContext.Provider value={{ cart, addCart }}>
+        <CartContext.Provider value={{ cart, addCart, removerItem }}>
             {children}
         </CartContext.Provider>
     )

@@ -50,7 +50,7 @@ function ItemDetailContainer() {
     const addItem = () => {
         console.log(produto.nome)
         addCart({
-            nome: produto.nome, 
+            ...produto, 
             quantidade: count,    
         })
     }
@@ -63,6 +63,7 @@ function ItemDetailContainer() {
                 </div>
                 <div className="">
                     <h1 className="flex font-bold text-3xl p-2">{produto.nome}</h1>
+                    <h1 className="flex font-thin text-2xl p-2">R$ {produto.price}</h1>
                     <p className="p-2">Restam apenas {produto.estoque} unidades desse produto!</p>
                     <ItemCount count={count} soma={soma} subtracao={subtracao} className="p-2"/>
                     <Button onClick={addItem} texto="Adiconar ao Carrinho"/>
