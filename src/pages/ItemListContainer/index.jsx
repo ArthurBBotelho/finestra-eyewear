@@ -1,5 +1,7 @@
 import React, { useState, useEffect } from "react";
 import ItemList from "../../components/ItemList";
+import db from "../../services/firebase";
+import { collection, getFirestore, getDocs } from "firebase/firestore";
 
 function ItemListContainer() {
     const [produtos, setProdutos] = useState([])
@@ -9,24 +11,9 @@ function ItemListContainer() {
     }, [])
 
     const pegarProdutos = () => {
-        return new Promise((resolve, reject) => {
-            setTimeout(() => {
-                 setProdutos([
-                    { id: 1, nome: "Phinet", estoque: 10, category: "Oculos de Grau", imagem: "https://github.com/ArthurBBotelho/finestra-eyewear/blob/main/src/imagens/products/phinet/phinet-front.png?raw=true" },
-                    { id: 9, nome: "Malik", estoque: 10, category: "Oculos de Grau", imagem: "https://github.com/ArthurBBotelho/finestra-eyewear/blob/main/src/imagens/products/malik/malik-front.png?raw=true" },
-                    { id: 4, nome: "Dominic", estoque: 5, category: "Oculos de Grau", imagem: "https://github.com/ArthurBBotelho/finestra-eyewear/blob/main/src/imagens/products/dominic/dominic-front.png?raw=true" },
-                    { id: 5, nome: "Emma", estoque: 4, category: "Oculos de Grau", imagem: "https://github.com/ArthurBBotelho/finestra-eyewear/blob/main/src/imagens/products/emma/emma-front.png?raw=true" },
-                    { id: 6, nome: "Frame", estoque: 12, category: "Oculos de Grau", imagem: "https://github.com/ArthurBBotelho/finestra-eyewear/blob/main/src/imagens/products/frame/frame-front.png?raw=true" },
-                    { id: 8, nome: "Mac", estoque: 3, category: "Oculos de Grau", imagem: "https://github.com/ArthurBBotelho/finestra-eyewear/blob/main/src/imagens/products/mac/mac-front.png?raw=true" },
-                    { id: 7, nome: "Lyra", estoque: 9, category: "Oculos de Sol", imagem: "https://github.com/ArthurBBotelho/finestra-eyewear/blob/main/src/imagens/products/lyra/lyra-front.png?raw=true" },
-                    { id: 2, nome: "Mirage", estoque: 5, category: "Oculos de Sol", imagem: "https://github.com/ArthurBBotelho/finestra-eyewear/blob/main/src/imagens/products/mirage/mirage-front.png?raw=true" },
-                    { id: 3, nome: "Bossa", estoque: 6, category: "Oculos de Sol", imagem: "https://github.com/ArthurBBotelho/finestra-eyewear/blob/main/src/imagens/products/bossa/bossa-front.png?raw=true" },
-                    { id: 10, nome: "Maxx", estoque: 6, category: "Oculos de Sol", imagem: "https://github.com/ArthurBBotelho/finestra-eyewear/blob/main/src/imagens/products/maxx/maxx-front.png?raw=true" },
-                    { id: 11, nome: "Otto", estoque: 10, category: "Oculos de Sol", imagem: "https://github.com/ArthurBBotelho/finestra-eyewear/blob/main/src/imagens/products/otto/otto-front.png?raw=true" },
-                    { id: 12, nome: "Sprint", estoque: 2, category: "Oculos de Sol", imagem: "https://github.com/ArthurBBotelho/finestra-eyewear/blob/main/src/imagens/products/sprint/sprint-front.png?raw=true" }
-                 ]);
-                 resolve();
-            }, 1000);
+        const produtosCollection = collection(db, "produtos");
+        getDocs(produtosCollection).then((snapshot) => {
+            setProdutos(snapshot.docs.map((doc) => ({ id: doc.id, ...doc.data() })));
         });
     }
 
