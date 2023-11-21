@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import ItemList from "../../components/ItemList";
 import db from "../../services/firebase";
-import { collection, getFirestore, getDocs } from "firebase/firestore";
+import { collection, getDocs, query, where, limit } from "firebase/firestore";
 
 function ItemListContainer() {
     const [produtos, setProdutos] = useState([])
@@ -11,9 +11,14 @@ function ItemListContainer() {
     }, [])
 
     const pegarProdutos = () => {
-        const produtosCollection = collection(db, "produtos");
+        // const produtosCollection = collection(db, "produtos");
+        // getDocs(produtosCollection).then((snapshot) => {
+        //     setProdutos(snapshot.docs.map((doc) => ({ id: doc.id, ...doc.data() })));
+        // });
+        const produtosCollection = query(collection(db, "produtos"), where("category", "==" , "Oculos de Grau"), limit(6));        
         getDocs(produtosCollection).then((snapshot) => {
-            setProdutos(snapshot.docs.map((doc) => ({ id: doc.id, ...doc.data() })));
+            const items = snapshot.docs.map((doc) => ({ id: doc.id, ...doc.data() }));
+            setProdutos(items);
         });
     }
 
