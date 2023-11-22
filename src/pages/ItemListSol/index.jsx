@@ -11,11 +11,11 @@ function ItemListContainer() {
     }, [])
 
     const pegarProdutos = () => {
-        const produtosCollection = collection(db, "produtos");
-        getDocs(produtosCollection).then((snapshot) => {
-            setProdutos(snapshot.docs.map((doc) => ({ id: doc.id, ...doc.data() })));
-        });
-        // const produtosCollection = query(collection(db, "produtos"), where("category", "==" , "Oculos de Grau"), limit(6));        
+        // const produtosCollection = collection(db, "produtos");
+        // getDocs(produtosCollection).then((snapshot) => {
+        //     setProdutos(snapshot.docs.map((doc) => ({ id: doc.id, ...doc.data() })));
+        // });
+        const produtosCollection = query(collection(db, "produtos"), where("category", "==" , "Oculos de Sol"), limit(6));        
         getDocs(produtosCollection).then((snapshot) => {
             const items = snapshot.docs.map((doc) => ({ id: doc.id, ...doc.data() }));
             setProdutos(items);

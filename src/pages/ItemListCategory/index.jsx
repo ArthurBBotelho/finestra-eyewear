@@ -2,20 +2,24 @@ import React, { useState, useEffect } from "react";
 import ItemList from "../../components/ItemList";
 import db from "../../services/firebase";
 import { collection, getDocs, query, where, limit } from "firebase/firestore";
+import { useParams } from "react-router-dom";
 
-function ItemListContainer() {
+function ItemListCategory() {
     const [produtos, setProdutos] = useState([])
+
+    const { category } = useParams()
 
     useEffect(() => {
         pegarProdutos()
     }, [])
 
     const pegarProdutos = () => {
-        const produtosCollection = collection(db, "produtos");
-        getDocs(produtosCollection).then((snapshot) => {
-            setProdutos(snapshot.docs.map((doc) => ({ id: doc.id, ...doc.data() })));
-        });
-        // const produtosCollection = query(collection(db, "produtos"), where("category", "==" , "Oculos de Grau"), limit(6));        
+        // const produtosCollection = collection(db, "produtos");
+        // getDocs(produtosCollection).then((snapshot) => {
+        //     setProdutos(snapshot.docs.map((doc) => ({ id: doc.id, ...doc.data() })));
+        // });
+        const type = category === "grau" ? "Oculos de Grau" : "Oculos de  Sol";
+        const produtosCollection = query(collection(db, "produtos"), where("category", "==" , type), limit(6));        
         getDocs(produtosCollection).then((snapshot) => {
             const items = snapshot.docs.map((doc) => ({ id: doc.id, ...doc.data() }));
             setProdutos(items);
@@ -33,4 +37,4 @@ function ItemListContainer() {
     )
 }
 
-export default ItemListContainer
+export default ItemListCategory

@@ -16,14 +16,14 @@ function ItemList({produtos}) {
     
     return(
         <div className="flex flex-col">
-            <div className="flex flex-wrap">
+            { listaGrau.length > 0 && <div className="flex flex-wrap">
                 <h1>Oculos de Grau</h1>
                 {listaGrau.map((produto) => (<Item key={produto.id} produto={produto}/>))}
-            </div>
-            <div className="flex flex-wrap">
+            </div>}
+            { listaSol.length > 0 && <div className="flex flex-wrap">
                 <h1>Oculos de Sol</h1>
                 {listaSol.map((produto) => (<Item key={produto.id} produto={produto}/>))}
-            </div>
+            </div>}
         </div>
     )
 
